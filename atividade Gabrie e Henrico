@@ -1,0 +1,1148 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPlS6b7eidPuGn4oMzGd2Fp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/boop-gudis/INTMI_2025/blob/main/atividade%20Gabrie%20e%20Henrico\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "92pj4XJMHXd-",
+        "outputId": "1498bf5d-7982-45f9-dead-f000f649042e"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Informe sua idade: 15\n"
+          ]
+        }
+      ],
+      "source": [
+        "#1 – Em um país fictício, o direito ao voto começa aos 16 anos. Crie um programa que receba a idade de uma pessoa e determine, usando apenas uma condição simples if, se ela já pode votar.\n",
+        "\n",
+        "idade = int(input(\"Informe sua idade: \"))\n",
+        "\n",
+        "if idade >= 16:\n",
+        "    print(\"Você já pode votar.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2 – Uma escola deseja automatizar a verificação do desempenho dos alunos. Leia duas notas, calcule a média e utilize uma estrutura if…else para informar se o aluno está aprovado (média ≥ 7) ou reprovado.\n",
+        "\n",
+        "n1 = float(input(\"Nota 1: \"))\n",
+        "n2 = float(input(\"Nota 2: \"))\n",
+        "media = (n1 + n2) / 2\n",
+        "\n",
+        "if media >= 7:\n",
+        "    print(\"Aprovado!\")\n",
+        "else:\n",
+        "    print(\"Reprovado.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Mcjd0_yZIqTc",
+        "outputId": "08338c0d-8fa3-4c6c-c5ad-4b8a68a30d52"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nota 1: 15\n",
+            "Nota 2: 50\n",
+            "Aprovado!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3 – Um sistema meteorológico quer classificar a sensação térmica do dia. A partir de uma temperatura informada, determine se está fria, agradável, quente ou muito quente usando if…elif…else.\n",
+        "\n",
+        "temp = float(input(\"Temperatura: \"))\n",
+        "\n",
+        "if temp < 15:\n",
+        "    print(\"Fria\")\n",
+        "elif temp < 25:\n",
+        "    print(\"Agradável\")\n",
+        "elif temp < 35:\n",
+        "    print(\"Quente\")\n",
+        "else:\n",
+        "    print(\"Muito quente\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XWg6v-e7Iw7R",
+        "outputId": "6c4d01f6-b5df-4f15-c902-b29006d32e3f"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Temperatura: 24\n",
+            "Agradável\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4 – Um painel informativo precisa identificar se um número é par ou ímpar. Peça ao usuário um número inteiro e exiba o resultado.\n",
+        "\n",
+        "num = int(input(\"Número: \"))\n",
+        "\n",
+        "if num % 2 == 0:\n",
+        "    print(\"Par\")\n",
+        "else:\n",
+        "    print(\"Ímpar\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sc7-0o2BI2rM",
+        "outputId": "c954e967-420d-406e-8829-2bcf22f82e8b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 45\n",
+            "Ímpar\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5 – Uma empresa deseja reajustar salários com base em faixas de rendimento. Receba o salário atual e aplique um aumento conforme as faixas (10%, 7% ou 5%), usando condicionais encadeadas. Exiba o novo salário.\n",
+        "\n",
+        "sal = float(input(\"Salário: \"))\n",
+        "\n",
+        "if sal <= 2000:\n",
+        "    novo = sal * 1.10\n",
+        "elif sal <= 5000:\n",
+        "    novo = sal * 1.07\n",
+        "else:\n",
+        "    novo = sal * 1.05\n",
+        "\n",
+        "print(\"Novo salário:\", novo)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PY1owqjVI6Dc",
+        "outputId": "e9972d6a-ab8c-4f81-b325-d19cc288b966"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Salário: 99999\n",
+            "Novo salário: 104998.95000000001\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6 – Um aplicativo financeiro precisa identificar qual de três valores é o maior. Leia três números e mostre o maior deles utilizando estruturas condicionais.\n",
+        "\n",
+        "a = float(input(\"A: \"))\n",
+        "b = float(input(\"B: \"))\n",
+        "c = float(input(\"C: \"))\n",
+        "\n",
+        "maior = a\n",
+        "if b > maior:\n",
+        "    maior = b\n",
+        "if c > maior:\n",
+        "    maior = c\n",
+        "\n",
+        "print(\"Maior número:\", maior)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iKfZq45dI988",
+        "outputId": "faf04d35-52b5-4b2a-deed-2dc3d27d48c8"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A: 6\n",
+            "B: 12\n",
+            "C: 7\n",
+            "Maior número: 12.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7 – Você está desenvolvendo um calendário digital. Crie um programa que receba um ano e determine se ele é bissexto.\n",
+        "\n",
+        "ano = int(input(\"Ano: \"))\n",
+        "\n",
+        "if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:\n",
+        "    print(\"Ano bissexto\")\n",
+        "else:\n",
+        "    print(\"Não é bissexto\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FNCsbXUnJBsM",
+        "outputId": "edcd5505-573e-4dc2-c1fa-ed02fdf20e65"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ano: 2010\n",
+            "Não é bissexto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8 – Um cinema utiliza preços diferentes para ingressos infantis e adultos. A partir da idade informada, exiba qual tipo de ingresso deve ser vendido.\n",
+        "\n",
+        "idade = int(input(\"Idade: \"))\n",
+        "\n",
+        "if idade < 12:\n",
+        "    print(\"Ingresso infantil\")\n",
+        "else:\n",
+        "    print(\"Ingresso adulto\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2gs2HBIeJGnO",
+        "outputId": "cdb3515e-9861-4252-bcc1-fd70c31ac014"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Idade: 15\n",
+            "Ingresso adulto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9 – Um supermercado usa códigos para identificar produtos. Receba um código (1, 2 ou 3) e exiba o produto correspondente. Se o código for inválido, informe isso ao usuário.\n",
+        "\n",
+        "cod = int(input(\"Código (1-3): \"))\n",
+        "\n",
+        "if cod == 1:\n",
+        "    print(\"Produto: Maçã\")\n",
+        "elif cod == 2:\n",
+        "    print(\"Produto: Banana\")\n",
+        "elif cod == 3:\n",
+        "    print(\"Produto: Laranja\")\n",
+        "else:\n",
+        "    print(\"Código inválido\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IZuCUcuaJMZm",
+        "outputId": "b63a5fb3-cb52-4b37-b03c-170804bf946a"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Código (1-3): 2\n",
+            "Produto: Banana\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10 – Um aplicativo exibe mensagens conforme o período do dia. A partir do horário informado (0 a 23), apresente a saudação apropriada.\n",
+        "\n",
+        "hora = int(input(\"Hora (0-23): \"))\n",
+        "\n",
+        "if 0 <= hora < 12:\n",
+        "    print(\"Bom dia!\")\n",
+        "elif 12 <= hora < 18:\n",
+        "    print(\"Boa tarde!\")\n",
+        "elif 18 <= hora < 24:\n",
+        "    print(\"Boa noite!\")\n",
+        "else:\n",
+        "    print(\"Hora inválida\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eo46JbfzJQ6l",
+        "outputId": "530aaa61-345b-4ad5-dbb8-89470d665f95"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hora (0-23): 12\n",
+            "Boa tarde!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#11 – Uma calculadora avançada deve permitir que o usuário some quantos números quiser. Peça números repetidamente até que o valor 0 seja digitado. Ao final, mostre a soma total.\n",
+        "\n",
+        "soma = 0\n",
+        "\n",
+        "while True:\n",
+        "    n = float(input(\"Número (0 para parar): \"))\n",
+        "    if n == 0:\n",
+        "        break\n",
+        "    soma += n\n",
+        "\n",
+        "print(\"Soma total:\", soma)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TkYZ5OE5JZHJ",
+        "outputId": "e2f94404-55aa-40e4-91b8-c8a806ac59ed"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número (0 para parar): 0\n",
+            "Soma total: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#12 – Um sistema de login precisa validar a senha de acesso. Continue pedindo a senha enquanto ela for diferente de “python123”. Quando o usuário acertar, exiba uma mensagem de boas-vindas.\n",
+        "\n",
+        "senha = \"\"\n",
+        "\n",
+        "while senha != \"python123\":\n",
+        "    senha = input(\"Digite a senha: \")\n",
+        "\n",
+        "print(\"Bem-vindo!\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WhAaMWJzJipK",
+        "outputId": "0b577fa9-792a-4feb-d6b0-c2b55982bb20"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a senha: python123\n",
+            "Bem-vindo!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#13 – Uma máquina de simulação deve somar números sequenciais começando em 1 até que a soma ultrapasse 100, mostrando cada número utilizado. Utilize um laço while.\n",
+        "\n",
+        "soma = 0\n",
+        "n = 1\n",
+        "\n",
+        "while soma <= 100:\n",
+        "    print(n)\n",
+        "    soma += n\n",
+        "    n += 1\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t3J3BIrSKErK",
+        "outputId": "a7c4d8b1-f836-42af-919f-9763f69f8ace"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#14 – Uma pesquisa está registrando idades. Continue lendo idades até que o usuário digite um valor negativo. Ao final, calcule e exiba a média das idades digitadas.\n",
+        "\n",
+        "soma = 0\n",
+        "cont = 0\n",
+        "\n",
+        "while True:\n",
+        "    idade = int(input(\"Idade: \"))\n",
+        "    if idade < 0:\n",
+        "        break\n",
+        "    soma += idade\n",
+        "    cont += 1\n",
+        "\n",
+        "print(\"Média das idades:\", soma / cont)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QUVXfzK-KMaS",
+        "outputId": "2f54d50a-47f5-4f2d-cf36-9b89203059c7"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Idade: 23\n",
+            "Idade: -45\n",
+            "Média das idades: 23.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#15 – Um cronômetro digital deve realizar uma contagem regressiva personalizada. Receba um número inicial e exiba a contagem até 0 usando um while.\n",
+        "\n",
+        "n = int(input(\"Número inicial: \"))\n",
+        "\n",
+        "while n >= 0:\n",
+        "    print(n)\n",
+        "    n -= 1\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ctnk_28cKQ0q",
+        "outputId": "1a14f300-00f5-4413-ec9c-45259a5be2b3"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número inicial: 13\n",
+            "13\n",
+            "12\n",
+            "11\n",
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#16 – Um painel de testes precisa exibir todos os números de 1 a 50. Utilize um for in range para imprimir essa sequência.\n",
+        "\n",
+        "for i in range(1, 51):\n",
+        "    print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1a6rVS9bKVPq",
+        "outputId": "aaf5e469-e22d-4186-f5dc-86595f81ca9f"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "16\n",
+            "17\n",
+            "18\n",
+            "19\n",
+            "20\n",
+            "21\n",
+            "22\n",
+            "23\n",
+            "24\n",
+            "25\n",
+            "26\n",
+            "27\n",
+            "28\n",
+            "29\n",
+            "30\n",
+            "31\n",
+            "32\n",
+            "33\n",
+            "34\n",
+            "35\n",
+            "36\n",
+            "37\n",
+            "38\n",
+            "39\n",
+            "40\n",
+            "41\n",
+            "42\n",
+            "43\n",
+            "44\n",
+            "45\n",
+            "46\n",
+            "47\n",
+            "48\n",
+            "49\n",
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#17 – Um módulo educacional precisa gerar a tabuada de um número escolhido pelo usuário. Leia o número e exiba a tabuada de 1 a 10 utilizando um for.\n",
+        "\n",
+        "n = int(input(\"Número: \"))\n",
+        "\n",
+        "for i in range(1, 10+1):\n",
+        "    print(f\"{n} x {i} = {n*i}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pt2oFsLpKjHa",
+        "outputId": "8edae15e-25bd-48fb-a0a1-2b6b0015251a"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 20\n",
+            "20 x 1 = 20\n",
+            "20 x 2 = 40\n",
+            "20 x 3 = 60\n",
+            "20 x 4 = 80\n",
+            "20 x 5 = 100\n",
+            "20 x 6 = 120\n",
+            "20 x 7 = 140\n",
+            "20 x 8 = 160\n",
+            "20 x 9 = 180\n",
+            "20 x 10 = 200\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#18 – Um programa de análise de texto deve mostrar cada letra de uma palavra. Leia uma palavra e exiba cada caractere separadamente usando for in.\n",
+        "\n",
+        "palavra = input(\"Palavra: \")\n",
+        "\n",
+        "for letra in palavra:\n",
+        "    print(letra)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3EiPsOjHKrLC",
+        "outputId": "fb1b672e-d6c2-494d-c85d-f6ee68b2032e"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Palavra: ameixa\n",
+            "a\n",
+            "m\n",
+            "e\n",
+            "i\n",
+            "x\n",
+            "a\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#19 – Em um formulário digital, serão digitadas 5 idades. Use um laço for para contar quantas delas são maiores que 18.\n",
+        "\n",
+        "cont = 0\n",
+        "\n",
+        "for i in range(5):\n",
+        "    idade = int(input(\"Idade: \"))\n",
+        "    if idade > 18:\n",
+        "        cont += 1\n",
+        "\n",
+        "print(\"Maiores que 18:\", cont)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1d6arOl9K4fC",
+        "outputId": "a47851dc-65ac-4c5f-f73a-fad686be9b10"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Idade: 0\n",
+            "Idade: 439\n",
+            "Idade: 249\n",
+            "Idade: 29\n",
+            "Idade: 19\n",
+            "Maiores que 18: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#20 – Um sistema estatístico deve analisar números fornecidos pelo usuário. Leia 7 números e determine qual deles é o maior.\n",
+        "\n",
+        "maior = None\n",
+        "\n",
+        "for i in range(7):\n",
+        "    n = float(input(\"Número: \"))\n",
+        "    if maior is None or n > maior:\n",
+        "        maior = n\n",
+        "\n",
+        "print(\"Maior número:\", maior)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ui6NwZMgLMoa",
+        "outputId": "52d50e30-f926-4296-b508-a5478a0fd6c3"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 46\n",
+            "Número: 25\n",
+            "Número: -90\n",
+            "Número: 24\n",
+            "Número: 12\n",
+            "Número: 24\n",
+            "Número: 42\n",
+            "Maior número: 46.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#21 – Um app de produtividade quer identificar qual de quatro tarefas possui o nome mais longo. Leia quatro nomes de tarefas e exiba aquela com mais caracteres.\n",
+        "\n",
+        "maior = \"\"\n",
+        "\n",
+        "for i in range(4):\n",
+        "    nome = input(\"Nome da tarefa: \")\n",
+        "    if len(nome) > len(maior):\n",
+        "        maior = nome\n",
+        "\n",
+        "print(\"Tarefa com mais caracteres:\", maior)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "URaCkrj4LRzi",
+        "outputId": "518ece8b-adea-49ad-d66a-c705da24bf44"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome da tarefa: baixaria\n",
+            "Nome da tarefa: 54\n",
+            "Nome da tarefa: 6\n",
+            "Nome da tarefa: 3\n",
+            "Tarefa com mais caracteres: baixaria\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#22 – Um programa de cálculos deve somar todos os números pares entre 2 e 100. Desenvolva essa operação usando um laço for.\n",
+        "\n",
+        "soma = 0\n",
+        "\n",
+        "for i in range(2, 101, 2):\n",
+        "    soma += i\n",
+        "\n",
+        "print(\"Soma:\", soma)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wUC9IrXGLVR6",
+        "outputId": "3f1068ab-98db-422a-df13-f52a0e0f0365"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Soma: 2550\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#23 – Um módulo de análise precisa classificar uma lista de valores. Leia 10 números e exiba quantos são positivos, negativos e quantos são iguais a zero.\n",
+        "\n",
+        "pos = neg = zero = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    n = float(input(\"Número: \"))\n",
+        "    if n > 0:\n",
+        "        pos += 1\n",
+        "    elif n < 0:\n",
+        "        neg += 1\n",
+        "    else:\n",
+        "        zero += 1\n",
+        "\n",
+        "print(\"Positivos:\", pos)\n",
+        "print(\"Negativos:\", neg)\n",
+        "print(\"Zeros:\", zero)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ScVhQRXcLdKq",
+        "outputId": "738836a0-f91f-4f47-cae5-9b1ac89dd9a5"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 23\n",
+            "Número: 13\n",
+            "Número: 5\n",
+            "Número: 7\n",
+            "Número: 3\n",
+            "Número: 53\n",
+            "Número: 732\n",
+            "Número: 7557\n",
+            "Número: 45\n",
+            "Número: 5\n",
+            "Positivos: 10\n",
+            "Negativos: 0\n",
+            "Zeros: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#24 – Uma escola quer filtrar nomes que comecem com determinadas letras. Leia 6 nomes e mostre apenas aqueles que começam com “A” ou “C”.\n",
+        "\n",
+        "for i in range(6):\n",
+        "    nome = input(\"Nome: \")\n",
+        "    if nome.upper().startswith((\"A\", \"C\")):\n",
+        "        print(nome)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6U6CQEsYLgvi",
+        "outputId": "96321c06-9119-4298-fc23-879ef0c47a3e"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome: acabou\n",
+            "acabou\n",
+            "Nome: acefalo\n",
+            "acefalo\n",
+            "Nome: achar\n",
+            "achar\n",
+            "Nome: cachorro\n",
+            "cachorro\n",
+            "Nome: abacaxi\n",
+            "abacaxi\n",
+            "Nome: abobora\n",
+            "abobora\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#25 – Uma caixa registradora digital permite que o usuário digite valores até inserir um código especial. Continue lendo números até que o valor 999 seja digitado. Use break para encerrar.\n",
+        "\n",
+        "while True:\n",
+        "    n = int(input(\"Valor: \"))\n",
+        "    if n == 999:\n",
+        "        break\n",
+        "    print(\"Registrado:\", n)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WJr4gI6OLn3C",
+        "outputId": "d87f57ff-8f52-4078-ae8a-4c79496fbeef"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Valor: 678\n",
+            "Registrado: 678\n",
+            "Valor: 999\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#26 – Um painel de processamento deve listar números de 1 a 20, mas ignorar todos os que forem múltiplos de 4. Use continue para pular essas ocorrências.\n",
+        "\n",
+        "for i in range(1, 21):\n",
+        "    if i % 4 == 0:\n",
+        "        continue\n",
+        "    print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sHN52HgWLsAK",
+        "outputId": "712cf760-4690-4cae-c879-5f561a9964be"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "17\n",
+            "18\n",
+            "19\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#27 – Crie um sistema de login com limite de tentativas. O usuário terá no máximo 3 tentativas para digitar a senha correta. Caso acerte antes, use break para encerrar o laço.\n",
+        "\n",
+        "for tentativas in range(3):\n",
+        "    senha = input(\"Senha: \")\n",
+        "    if senha == \"python123\":\n",
+        "        print(\"Acesso permitido!\")\n",
+        "        break\n",
+        "else:\n",
+        "    print(\"Acesso bloqueado!\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ig0alyKELx0i",
+        "outputId": "400b29a9-27d3-4496-95e1-6ee583cbcb4e"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Senha: python123\n",
+            "Acesso permitido!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#28 – Desenvolva um programa que leia 10 números e some apenas os valores positivos. Caso um número negativo seja digitado, utilize continue para ignorá-lo.\n",
+        "\n",
+        "soma = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    n = float(input(\"Número: \"))\n",
+        "    if n < 0:\n",
+        "        continue\n",
+        "    soma += n\n",
+        "\n",
+        "print(\"Soma dos positivos:\", soma)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "poPQNffxL0Lq",
+        "outputId": "7a949e40-db9c-4f78-96e0-87acbe494554"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 13\n",
+            "Número: 22\n",
+            "Número: 0\n",
+            "Número: 15\n",
+            "Número: 66\n",
+            "Número: 99\n",
+            "Número: 03\n",
+            "Número: 132\n",
+            "Número: 42\n",
+            "Número: 46\n",
+            "Soma dos positivos: 438.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#29 – Simule um acumulador que percorre números até que a soma ultrapasse 200. Quando isso ocorrer, encerre o laço usando break.\n",
+        "\n",
+        "soma = 0\n",
+        "n = 1\n",
+        "\n",
+        "while True:\n",
+        "    soma += n\n",
+        "    if soma > 200:\n",
+        "        break\n",
+        "    n += 1\n",
+        "\n",
+        "print(\"Soma final:\", soma)\n",
+        "print(\"Último número somado:\", n)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EQK9Q0tQL31y",
+        "outputId": "f7f67318-5956-4920-e4e3-2e1e69ff7110"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Soma final: 210\n",
+            "Último número somado: 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#30 – Um programa de edição quer contar quantas palavras o usuário digitou. Continue lendo palavras até que o usuário digite “fim”. Depois, exiba quantas palavras válidas foram informadas.\n",
+        "\n",
+        "cont = 0\n",
+        "\n",
+        "while True:\n",
+        "    palavra = input(\"Digite uma palavra ('fim' para parar): \")\n",
+        "    if palavra.lower() == \"fim\":\n",
+        "        break\n",
+        "    cont += 1\n",
+        "\n",
+        "print(\"Total de palavras digitadas:\", cont)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OCLJhVqWL7e6",
+        "outputId": "c2ea0a41-6515-43d1-972f-a946454b5d2d"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma palavra ('fim' para parar): fim\n",
+            "Total de palavras digitadas: 0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
